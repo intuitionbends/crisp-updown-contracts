@@ -9,7 +9,8 @@
       "address": "0xfBAc8E64AD6c74B3a8b0282d09A00Cf704190Cd6",
       "creationTx": "0xa51819cc3ebc11d1b208e7888982f7696af2b8c458bbefaef47550ecd25a7f0e",
       "block": 144983246,
-      "sourcify": "exact_match"
+      "sourcify": "exact_match",
+      "bscscan": "exact_match"
     },
     "TestUSDT": {
       "address": "0x6e1A88AD2cD18f3dA0f79FF14D20D939f8b74570",
@@ -18,7 +19,8 @@
       "symbol": "tUSDT",
       "decimals": 18,
       "note": "Anyone may mint. Testnet stand-in for BSC USDT.",
-      "sourcify": "exact_match"
+      "sourcify": "exact_match",
+      "bscscan": "exact_match"
     }
   },
   "roles": {
