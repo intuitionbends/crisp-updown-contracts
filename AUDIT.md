@@ -4,7 +4,7 @@ An internal security review and test campaign on `src/UpDownVault.sol`, done bef
 replace the independent audit the plan requires before mainnet.
 
 - **Source reviewed:** `src/UpDownVault.sol`, SHA-256 `60692fc76295dd2f…` after the fixes and the key rotation below.
-  Nothing is committed yet, so there is no commit hash.
+  This is the source as first committed, in `e047d95`.
 - **Method:** a line-by-line review of every function against each party that could act against the vault. Each
   conclusion is backed by a test that tries the attack or checks the edge, plus fuzzing and invariant runs.
 - **Tools:** Foundry 1.0 (unit, fuzz and invariant tests) and Slither 0.11.6 (static analysis, 102 detectors; see
