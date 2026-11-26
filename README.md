@@ -16,6 +16,26 @@ slither .                                          # static analysis; settings i
 Foundry 1.0, solc 0.8.28 (`via_ir`, optimizer 10,000 runs), EVM `cancun`. `forge-std` v1.9.7 is vendored in `lib/`
 (copied from a local checkout, not a submodule), and `foundry.toml` sets `offline = true`.
 
+## Deployments
+
+**BSC testnet (chain 97)**, deployed 2026-11-26. This is a test deployment for sharing, not the launch contract.
+
+| Contract | Address | Source |
+|---|---|---|
+| UpDownVault | [`0xfBAc8E64AD6c74B3a8b0282d09A00Cf704190Cd6`](https://testnet.bscscan.com/address/0xfBAc8E64AD6c74B3a8b0282d09A00Cf704190Cd6) | [Sourcify, exact match](https://repo.sourcify.dev/97/0xfBAc8E64AD6c74B3a8b0282d09A00Cf704190Cd6) |
+| TestUSDT (tUSDT, 18 decimals, anyone can mint) | [`0x6e1A88AD2cD18f3dA0f79FF14D20D939f8b74570`](https://testnet.bscscan.com/address/0x6e1A88AD2cD18f3dA0f79FF14D20D939f8b74570) | [Sourcify, exact match](https://repo.sourcify.dev/97/0x6e1A88AD2cD18f3dA0f79FF14D20D939f8b74570) |
+
+Roles: admin, guardian and fee recipient are the deployer `0x599db79A2f192A14bfef857462025014305AB33c`; the operator
+is `0xD97d8C0451FCC2ef4078cdE3628fCd3Aa12220bF` and the oracle `0x9596702B27dD4b8F126c21383e298363410e9487`. Their
+keys are encrypted keystores on the owner's machine. Settings are the tested values in
+[script/DeployUpDownVault.s.sol](script/DeployUpDownVault.s.sol), including the 24-hour key-change delay; the fee
+ceiling starts at 0. The full record is [deployments/bsc-testnet.json](deployments/bsc-testnet.json).
+
+To deploy again: `./script/deploy-testnet.sh` (asks for the deployer keystore password). The same script deploys to
+BSC mainnet on real USDT when pointed at a mainnet RPC. Foundry 1.0's built-in Sourcify step fails against Sourcify's
+current API, so source was published through Sourcify's v2 API with the same compiler input
+(`forge verify-contract --show-standard-json-input`).
+
 ## What it holds
 
 Three balances in one token, kept apart:

@@ -1,0 +1,43 @@
+{
+  "network": "BSC testnet",
+  "chainId": 97,
+  "deployedAt": "2026-11-26",
+  "sourceCommit": "10e3f65 (UpDownVault.sol unchanged since e047d95, SHA-256 60692fc76295dd2f...)",
+  "deployer": "0x599db79A2f192A14bfef857462025014305AB33c",
+  "contracts": {
+    "UpDownVault": {
+      "address": "0xfBAc8E64AD6c74B3a8b0282d09A00Cf704190Cd6",
+      "creationTx": "0xa51819cc3ebc11d1b208e7888982f7696af2b8c458bbefaef47550ecd25a7f0e",
+      "block": 144983246,
+      "sourcify": "exact_match"
+    },
+    "TestUSDT": {
+      "address": "0x6e1A88AD2cD18f3dA0f79FF14D20D939f8b74570",
+      "creationTx": "0xdb8c8405d473c624a1f701f53bb822caee6ddc8e9f3c536f9a436021232b3ba1",
+      "block": 144983238,
+      "symbol": "tUSDT",
+      "decimals": 18,
+      "note": "Anyone may mint. Testnet stand-in for BSC USDT.",
+      "sourcify": "exact_match"
+    }
+  },
+  "roles": {
+    "admin": "0x599db79A2f192A14bfef857462025014305AB33c",
+    "guardian": "0x599db79A2f192A14bfef857462025014305AB33c",
+    "feeRecipient": "0x599db79A2f192A14bfef857462025014305AB33c",
+    "operator": "0xD97d8C0451FCC2ef4078cdE3628fCd3Aa12220bF",
+    "oracle": "0x9596702B27dD4b8F126c21383e298363410e9487"
+  },
+  "settings": {
+    "unit": "1e16 (one cent)",
+    "feeLimitBps": 500,
+    "feeRoundsUp": false,
+    "feeCeilingBps": 0,
+    "silenceSeconds": 21600,
+    "dayOffsetSeconds": 28800,
+    "maxPriceX100": 500,
+    "maxOvershootSeconds": 20,
+    "maxEntryLag": 3,
+    "keyChangeDelay": 86400
+  }
+}
